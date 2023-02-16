@@ -1,4 +1,4 @@
-//! A framework for building robust parsers.
+#![doc = include_str!("../README.md")]
 
 pub mod iter;
 pub mod parser;
