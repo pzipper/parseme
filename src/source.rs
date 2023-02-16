@@ -1,4 +1,7 @@
-use std::{collections::VecDeque, str::Chars};
+extern crate alloc;
+
+use alloc::collections::VecDeque;
+use core::str::Chars;
 
 use crate::iter::Peek;
 

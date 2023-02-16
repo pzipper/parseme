@@ -1,3 +1,7 @@
+extern crate alloc;
+
+use alloc::{boxed::Box, vec::Vec};
+
 use crate::{Error, Parser};
 
 /// An error that occurred during the parsing of a [Group].

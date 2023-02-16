@@ -1,4 +1,6 @@
-use std::marker::PhantomData;
+// extern crate core;
+
+use core::marker::PhantomData;
 
 use crate::{parser::Parser, stream::Stream};
 
