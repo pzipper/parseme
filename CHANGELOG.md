@@ -1,7 +1,7 @@
 # Changelog
 
 ## 0.2.0-alpha
-- feat: Implement [Group] parsers.
+- feat: Implement `Group` parsers.
 - feat: use `no_std`
 - feat: `alloc` feature, which disables using allocations
 
