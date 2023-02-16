@@ -10,7 +10,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [features]
-default = ["xid"]
+default = ["alloc", "xid"]
+alloc = []
 xid = ["parseme-xid"]
 
 [workspace]

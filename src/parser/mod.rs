@@ -1,8 +1,10 @@
 //! The [Parser] trait.
 
+#[cfg(feature = "alloc")]
 mod group;
 mod stream;
 
+#[cfg(feature = "alloc")]
 pub use group::*;
 pub use stream::*;
 
