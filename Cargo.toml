@@ -16,4 +16,4 @@ xid = ["parseme-xid"]
 
 [workspace]
 [dependencies]
-parseme-xid = { version = "0.1.0-alpha", path = "parseme-xid", optional = true }
+parseme-xid = { version = "0.2.0-alpha", path = "parseme-xid", optional = true }
