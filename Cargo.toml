@@ -1,6 +1,10 @@
 [package]
 name = "parseme"
+description = "A framework for building robust parsers"
 version = "0.1.0-alpha"
+license = "MIT"
+homepage = "https://github.com/pzipper/parseme"
+repository = "https://github.com/pzipper/parseme"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
