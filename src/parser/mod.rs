@@ -1,7 +1,9 @@
 //! The [Parser] trait.
 
+mod group;
 mod stream;
 
+pub use group::*;
 pub use stream::*;
 
 /// Any parser compatible with Parseme.

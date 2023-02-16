@@ -1,10 +1,12 @@
 #![doc = include_str!("../README.md")]
 
+mod error;
 pub mod iter;
 pub mod parser;
 mod source;
 pub mod stream;
 
+pub use error::*;
 pub use parser::Parser;
 pub use source::*;
 
