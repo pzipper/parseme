@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.3.0-alpha
+- feat!: Introduce `NoMatchError` rather than `()` to be more clear.
+
 ## 0.2.0-alpha
 - feat: Implement `Group` parsers.
 - feat: use `no_std`

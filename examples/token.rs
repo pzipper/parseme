@@ -1,4 +1,4 @@
-use parseme::{parser::Group, stream::Stream, Parser, Source};
+use parseme::{parser::Group, stream::Stream, NoMatchError, Parser, Source};
 
 #[derive(Debug, PartialEq)]
 pub enum Token {
@@ -6,16 +6,16 @@ pub enum Token {
     Ident(String),
 }
 
-fn parse_whitespace(input: &mut Source) -> Result<Token, ()> {
-    parseme::iter::next_if(input, char::is_whitespace).ok_or(())?;
+fn parse_whitespace(input: &mut Source) -> Result<Token, NoMatchError> {
+    parseme::iter::next_if(input, char::is_whitespace).ok_or(NoMatchError)?;
 
     Ok(Token::Whitespace)
 }
 
-fn parse_iden<'a>(input: &mut Source<'a>) -> Result<Token, ()> {
+fn parse_iden<'a>(input: &mut Source<'a>) -> Result<Token, NoMatchError> {
     let start_pos = input.pos();
 
-    parseme::iter::next_if(input, parseme::xid::is_start).ok_or(())?;
+    parseme::iter::next_if(input, parseme::xid::is_start).ok_or(NoMatchError)?;
     parseme::iter::advance_while(input, parseme::xid::is_continue);
 
     Ok(Token::Ident(
