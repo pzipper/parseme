@@ -1,7 +1,7 @@
 [package]
 name = "parseme-xid"
 description = "Basic Unicode XID support for Parseme."
-version = "0.2.0-alpha"
+version = "0.3.0-alpha"
 license = "MIT"
 homepage = "https://github.com/pzipper/parseme"
 repository = "https://github.com/pzipper/parseme"
