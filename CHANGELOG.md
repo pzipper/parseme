@@ -2,6 +2,7 @@
 
 ## 0.3.0-alpha
 - feat!: Introduce `NoMatchError` rather than `()` to be more clear.
+- feat: Implement `ParserIterator` wrapper
 
 ## 0.2.0-alpha
 - feat: Implement `Group` parsers.

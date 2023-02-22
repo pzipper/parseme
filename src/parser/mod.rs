@@ -2,10 +2,12 @@
 
 #[cfg(feature = "alloc")]
 mod group;
+mod iter;
 mod stream;
 
 #[cfg(feature = "alloc")]
 pub use group::*;
+pub use iter::*;
 pub use stream::*;
 
 /// Any parser compatible with Parseme.
@@ -23,6 +25,18 @@ pub trait Parser<In: ?Sized, Out, Err> {
         Self: Sized,
     {
         ParserStream::new(input, self)
+    }
+
+    /// Returns a [ParserIter] which wraps this [Parser] and the provided input.
+    #[inline]
+    fn iter<'input, 'parser>(
+        &'parser mut self,
+        input: &'input mut In,
+    ) -> ParserIter<'input, 'parser, In, Out, Err, Self>
+    where
+        Self: Sized,
+    {
+        ParserIter::new(input, self)
     }
 }
 
